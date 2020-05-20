@@ -1,0 +1,212 @@
+{
+	// Place your snippets for jack here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"main": {
+		"prefix": "main",
+		"body": [
+			"class Main {",
+			"\tfunction void main() {",
+			"\t\t$0",
+			"\t\treturn;",
+			"\t}",
+			"}"
+		],
+		"description": "Main class"
+	},
+
+	"class": {
+		"prefix": "cls",
+		"body": [
+			"class ${1:cls} {",
+			"\t$0",
+			"}"
+		],
+		"description": "Class"
+	},
+
+	"constructor": {
+		"prefix": "ctor",
+		"body": [
+			"constructor ${1:cls} new($2) {",
+			"\t$0return this;",
+			"}"
+		],
+		"description": "Constructor"
+	},
+
+	"dispose method": {
+		"prefix": "dispm",
+		"body": [
+			"method void dispose() {",
+			"\tdo Memory.deAlloc(this);",
+			"\treturn;",
+			"}"
+		],
+		"description": "Dispose method"
+	},
+
+	"class with constructor": {
+		"prefix": "clsc",
+		"body": [
+			"class ${1:cls} {",
+			"\tconstructor ${1:cls} new($2) {",
+			"\t\t$0",
+			"\t}",
+			"",
+			"\tmethod void dispose() {",
+			"\t\tdo Memory.deAlloc(this);",
+			"\t\treturn;",
+			"\t}",
+			"}"
+		],
+		"description": "Class with constructor"
+	},
+
+	"field": {
+		"prefix": "fld",
+		"body": [
+			"field ${1:int} ${0:fld};"
+		],
+		"description": "Field"
+	},
+
+	"method": {
+		"prefix": "meth",
+		"body": [
+			"method ${1:int} ${2:meth}($3) {",
+			"\treturn$0;",
+			"}"
+		],
+		"description": "Method"
+	},
+
+	"function": {
+		"prefix": "func",
+		"body": [
+			"function ${1:int} ${2:func}($3) {",
+			"\treturn$0;",
+			"}"
+		],
+		"description": "Function"
+	},
+
+	"print int": {
+		"prefix": "printint",
+		"body": [
+			"do Output.printInt($0);"
+		],
+		"description": "Output.printInt"
+	},
+
+	"print string": {
+		"prefix": "printstr",
+		"body": [
+			"do Output.printString($0);"
+		],
+		"description": "Output.printString"
+	},
+
+	"print ln": {
+		"prefix": "println",
+		"body": [
+			"do Output.println();"
+		],
+		"description": "Output.printString"
+	},
+
+	"return": {
+		"prefix": "ret",
+		"body": [
+			"return;"
+		],
+		"description": "Return"
+	},
+
+	"dealloc": {
+		"prefix": "dealloc",
+		"body": [
+			"do Memory.deAlloc(${0:this});"
+		],
+		"description": "Memory.deAlloc"
+	},
+
+	"if statement": {
+		"prefix": "ifs",
+		"body": [
+			"if (${1:exp}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "If statement"
+	},
+
+	"while statement": {
+		"prefix": "whl",
+		"body": [
+			"while (${1:exp}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "While statement"
+	},
+
+	"new class": {
+		"prefix": "new",
+		"body": [
+			"${1:cls}.new($0);"
+		],
+		"description": "New object"
+	},
+
+	"dispose call": {
+		"prefix": "dispc",
+		"body": [
+			"do ${0:cls}.dispose();"
+		],
+		"description": "Dispose call"
+	},
+
+	"memory poke": {
+		"prefix": "poke",
+		"body": [
+			"do Memory.poke($0);"
+		],
+		"description": "Memory.poke"
+	},
+
+	"set color": {
+		"prefix": "setcolor",
+		"body": [
+			"do Screen.setColor(${0:true});"
+		],
+		"description": "Screen.setColor"
+	},
+
+	"draw line": {
+		"prefix": "drawline",
+		"body": [
+			"do Screen.drawLine($0);"
+		],
+		"description": "Screen.drawLine"
+	},
+
+	"Sys.wait": {
+		"prefix": "wait",
+		"body": [
+			"do Sys.wait($0);"
+		],
+		"description": "Sys.wait"
+	},
+}
